@@ -1,0 +1,12 @@
+google-adk
+vertexai
+google-cloud-aiplatform
+google-cloud-storage
+google-cloud-pubsub
+functions-framework
+cloudevents
+fastapi
+uvicorn
+gradio
+python-dotenv
+requests

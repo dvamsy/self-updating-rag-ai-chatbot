@@ -1,0 +1,68 @@
+[project]
+name = "rag"
+version = "0.1.0"
+description = "Answer questions related to Vertex AI documentation using Vertex AI RAG Engine"
+license = "Apache-2.0"
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "google-cloud-aiplatform[adk,agent-engines]>=1.108.0",
+    "google-adk>=1.10.0",
+    "pydantic-settings>=2.8.1",
+    "tabulate>=0.9.0",
+    "google-auth>=2.36.0",
+    "requests>=2.32.3",
+    "llama-index>=0.12",
+    "gradio>=5.50.0",
+    "uvicorn>=0.38.0",
+    "fastapi>=0.118.3",
+    "python-dotenv>=1.2.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-mock>=3.14.0",
+    "scikit-learn>=1.6.1",
+    "pytest-cov>=6.0.0",
+    "pytest-asyncio>=0.26.0",
+    "agent-starter-pack>=0.14.1",
+    "black>=25.1.0",
+]
+lint = [
+    "ruff>=0.4.6",
+    "mypy>=1.15.0",
+    "codespell>=2.2.0",
+    "types-pyyaml>=6.0.12.20240917",
+    "types-requests>=2.32.0.20240914",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+# --- Other tool sections like ruff, mypy, etc. remain the same ---
+[tool.ruff.lint]
+select = [ "E", "F", "W", "I", "C", "B", "UP", "RUF" ]
+ignore = ["E501", "C901"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["rag"]
+
+[tool.mypy]
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+exclude = [".venv"]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+asyncio_default_fixture_loop_scope = "function"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
