@@ -102,7 +102,7 @@ ask_vertex_retrieval = VertexAiRagRetrieval(
 )
 ```
 2. Deploy to Agent Engine
-Deploy the agent to Vertex AI. This packages your code and provisions the infrastructure.
+This script package the local agent code, handle dependencies, and provision the server-less Vertex AI Agent Engine infrastructure. The expected completion time of this script is 2 to 3 minutes.
 
 ```bash
 uv run python ai_agent/vertex_engine_deploy/deploy.py
