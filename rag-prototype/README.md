@@ -85,7 +85,7 @@ This script will automatically update your .env file with SOURCE_GCS_BUCKET, STA
 1. Configure Agent Code
 ⚠️ IMPORTANT: The deployed agent runs in a secure cloud environment and cannot access your local .env file. You must hardcode the Corpus ID.
 
-Open ai_agent/rag/agent.py (or ai_agent/agent.py) and update the rag_corpus field:
+Open ai_agent/agent.py and update the rag_corpus field:
 
 ```python
 
