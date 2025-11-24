@@ -33,7 +33,7 @@ It leverages the **Vertex AI RAG Engine** to fetch relevant documentation snippe
 
 ## Install `uv`
 ```bash
-curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 ## 1. Setup & Installation
 
@@ -41,7 +41,7 @@ curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | 
 Clone the repository and install dependencies using uv.
 
 ```bash
-git clone [https://github.com/google/adk-samples.git](https://github.com/google/adk-samples.git)
+git clone https://github.com/dvamsy/self-updating-rag-ai-chatbot.git
 cd rag-prototype
 ```
 ## Install dependencies
