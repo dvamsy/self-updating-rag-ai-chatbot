@@ -42,7 +42,7 @@ Clone the repository and install dependencies using uv.
 
 ```bash
 git clone https://github.com/dvamsy/self-updating-rag-ai-chatbot.git
-cd rag-prototype
+cd self-updating-rag-ai-chatbot/rag-prototype
 ```
 ## Install dependencies
 ```bash
