@@ -182,6 +182,21 @@ Verify the file appears in the corpus:
 ```bash
 uv run python backend-automation/validate_corpus.py
 ```
+
+## Trobuleshooting
+Quota Exceeded Errors
+When running the data_load_to_corpus.py script, you may encounter an error related to API quotas, such as:
+```bash
+Error uploading file ...: 429 Quota exceeded for aiplatform.googleapis.com/online_prediction_requests_per_base_model with base model: textembedding-gecko.
+```
+This is especially common for new Google Cloud projects that have lower default quotas.
+**Solution:**
+
+You will need to request a quota increase for the model you are using.
+
+Navigate to the Quotas page in the Google Cloud Console: https://console.cloud.google.com/iam-admin/quotas
+Follow the instructions in the official documentation to request a quota increase: https://cloud.google.com/vertex-ai/docs/quotas#request_a_quota_increase
+
 🧹 Cleanup
 To avoid incurring costs, delete the resources when you are done.
 ```bash
